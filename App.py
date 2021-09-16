@@ -11,6 +11,10 @@ from PIL import Image
 
 model = tf.keras.models.load_model('higgs_boson_classifier.h5')
 
+
+#import the dataset
+higgs = pd.read_csv('Dataset.csv')
+
 def prediction(model,input):
     prediction = model.predict(input)
     print('prediction successful')
@@ -27,8 +31,6 @@ col = [['DER_mass_MMC', 'DER_mass_transverse_met_lep', '',
        'DER_pt_tot','DER_pt_ratio_lep_tau','DER_met_phi_centrality','PRI_tau_pt',
        'PRI_tau_eta','PRI_tau_phi','PRI_lep_eta','PRI_lep_phi','PRI_met_phi','PRI_jet_leading_phi']]
 
-#import the dataset
-higgs = pd.read_csv('C:\\Users\\Admin\\Downloads\\Dataset.csv')
 #correlation matrix
 corrMatrix = higgs.corr()
 
