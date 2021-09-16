@@ -47,7 +47,7 @@ def main():
     st.header('Higgs Boson Event Detection')
     
     
-    image = Image.open('C:\Users\Admin\Documents\Higgs Boson\07-aug_higgs.jpg')
+    image = Image.open('07-aug_higgs.jpg')
     st.image(image, caption='Higgs Boson Collider')
     st.write('Sample of the Higgs Boson Data:')
     st.table(higgs)
